@@ -1,0 +1,19 @@
+<div class="container">
+  <div>
+    <div>
+      <h2 class="display-3">Registrar novos usuários</h2>
+    </div>
+    <app-formulario
+    (userCreated)="onAddNewUser($event)"
+    ></app-formulario>
+  </div>
+  
+  <div class="grid-3-columns mt-100">
+    <app-usuario *ngFor="let usuario of usuarios" [usuario]="usuario"></app-usuario>
+    <!-- <div class="base p-all-20 top-border-color" *ngFor="let usuario of usuarios">
+      <h2 class="mt-5 mb-10">Nome: {{usuario.name}}</h2>
+      <p class="mt-10 mb-0"><strong>E-mail:</strong> {{usuario.email}}</p>
+      <p class="mt-5 mb-0"><strong>Telefone:</strong> {{usuario.phone}}</p>
+    </div> -->
+  </div> 
+</div>
